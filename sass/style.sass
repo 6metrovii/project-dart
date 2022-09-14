@@ -1,0 +1,734 @@
+@import "./_mixins"
+@import "./_vars"
+*
+    font-family: 'Raleway', sans-serif
+    font-size: 15px
+body
+    margin: 0 auto
+div:focus, input:focus, textarea:focus 
+    outline: none
+h2 
+    color: #061e37
+    font-size: 45px
+    font-weight: 600
+    text-align: center
+a
+    text-decoration: none
+.container 
+    padding: 0 80px
+    @media(max-width:1200px)
+        padding: 0 30px
+.title  
+    color: #061e37
+    font-size: 45px
+    font-weight: 600
+    font-style: normal
+    letter-spacing: normal
+    line-height: normal
+    text-align: center
+.descr 
+    max-width: 555px
+    color: #b0bec5
+    margin: 25px auto 0 auto
+    letter-spacing: normal
+    line-height: 25px
+    text-align: center
+.promo 
+    background: url(../image/bg/2-layers.jpg) $center-cover 
+    min-height: 750px
+    padding: 30px 0
+    .header 
+        @include flex-between
+        .logo-wrap 
+            @include flex-center
+            .logo-img 
+                margin-right: 10px
+                width: 40px
+            .logo-text 
+                color: #ffffff
+                font-family: "Raleway "
+                font-size: 20px
+                font-style: normal
+                line-height: 15px
+            span 
+                font-family: Raleway
+                font-size: 20px
+                font-weight: 700
+        .nav 
+            @include flex-center
+            .nav-list 
+                list-style: none
+                display: flex
+                @media (max-width: 800px)
+                    flex-direction: column
+                    list-style: disc
+                    color: #ffffff
+                .nav-item 
+                    margin: 3px 25px
+                    opacity: 0.6
+                    transition: opasity 0.5s ease
+                    font-size: 16px
+                    @media (max-width: 800px)
+                        font-size: 20px
+                    &:hover 
+                        opacity: 1
+                    a 
+                        color: #ffffff
+                        font-weight: 600
+                        font-size: 18px
+                        @media(max-width:1200px)
+                            font-size: 14px
+        .promo-sign 
+            width: 120px
+            height: 60px
+            background-color: transparent
+            border: 1px white solid 
+            color: #ffffff
+            font-family: Raleway
+            font-size: 18px
+            font-weight: 400
+            &:hover
+                background: #ffffff
+                color: black
+                font-weight: 600
+.promo-content 
+    margin-top: 170px
+    @include flex-between-center
+    @media(max-width:1200px)
+        margin-top: 20px
+    @media(max-width: 800px)
+        flex-direction: column
+    .promo-text 
+        width: 50%
+        @media(max-width: 800px)
+            width: 80%
+        .promo-title 
+            color: #ffffff
+            font-size: 55px
+            font-weight:700
+            line-height: 65px
+            text-align: left
+            text-transform: uppercase
+            @media(max-width: 1200px)
+                font-size: 35px
+            @media(max-width: 800px)
+                text-align: center
+        .promo-descr 
+            color: #ffffff
+            font-size: 18px
+            letter-spacing: normal
+            line-height: 35px
+            opacity: 0.7
+        .promo-btns
+            margin: 38px 0 0 0
+            @include flex-center
+            @media(max-width: 800px)
+                margin-left: 30px
+            .promo-btn-black
+                width: 180px
+                height: 55px
+                border-radius: 5px
+                background-color: #061e37
+                color: #ffffff
+                margin-right: 30px
+                font-size: 18px
+                border: none
+                transition: all 0.2s ease
+                @media(max-width:1200px)
+                    width: 40%
+                &:hover 
+                    background-color: white
+                    color:#061e37
+                    font-weight: 700
+            .promo-btn-white 
+                font-family: Roboto
+                width: 180px
+                height: 55px
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15)
+                border-radius: 5px
+                background-color: #ffffff
+                color: #061e37
+                font-size: 18px
+                font-weight: 700
+                border: none
+                transition: all 0.2s ease
+                @media(max-width:1200px)
+                    width: 40%
+                &:hover 
+                    background-color:#061e37
+                    color: #fffff
+                    font-weight: 700
+.promo-video 
+    width: 50%
+    position: relative  
+    @media(max-width: 800px)
+        margin-top: 20px
+        width: 80%                  
+    .video 
+        display: flex
+        margin: 0 auto
+        width: 80%
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+        border-radius: 5px
+        border: 1px solid #061e37
+        @media(max-width: 600px)
+            margin-top: 20px
+    .promo-play 
+        font-size: 12px
+        font-weight: 700
+        width: 15%
+        text-align: center
+        text-transform: uppercase
+        color: #061e37
+        position: absolute
+        top: calc(50% - 50px)
+        left: calc(50% - 50px) 
+        cursor: pointer
+        @media(max-width: 1200px)
+            width: 20%
+        div 
+            margin: 0 auto 22px auto
+            width: 60%
+            height: 40%
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+            border-radius: 5px
+            background-color: #061e37
+            &:hover
+                transform: scale(0.95, 0.95)
+            i 
+                color: white
+                margin: 20px auto
+.usefull 
+    padding: 100px 0
+    min-height: 800px
+    .subtitle 
+        color: #b0bec5
+        font-size: 25px
+        font-weight: 600
+        text-align: center
+.usefull-content 
+    margin-top: 90px
+    @include flex-between
+    .content-item 
+        width: 30%
+        .usefull-title 
+            color: #061e37
+            font-weight: 700
+            font-size: 20px
+            line-height: 25px
+            text-align: center
+        .usefull-descr 
+            margin: 0 auto
+            width: 80%
+            color: #78909c
+            line-height: 20px
+            text-align: center
+        .usefull-icon 
+            color: #b388ff
+            @include flex-center
+            justify-content: center
+            margin: 0 auto 44px auto
+            i
+                font-size: 80px
+        #user 
+            color: #80d8ff
+        #fire 
+            color: #ea80fc
+.usefull-btn 
+    display: block
+    width: 150px
+    height: 55px
+    margin: 78px auto 0 auto
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.15)
+    border-radius: 5px
+    background-color: #1de9b6
+    color: #ffffff
+    font-weight: 700
+    text-align: center
+    border: none
+    transition: all 0.2s ease
+    &:hover 
+        background-color: #b388ff
+        color: #ffffff
+.blocks 
+    min-height: 150px
+    display: flex
+    .bloks-item 
+        width: 25%
+        min-height: 150px
+        display: flex
+        justify-content: center
+        align-items: center
+        @media(max-width: 600px)
+            flex-direction: column
+    #business 
+        background-color: #80d8ff
+    #downloads 
+        background-color: #82b1ff
+    #free-inst 
+        background-color: #b388ff
+    #pro-users 
+        background-color: #ea80fc
+    .blocks-icons 
+        @include flex-between-center
+        i 
+            color: #ffffff
+            font-size: 30px
+            @media(max-width: 800px)
+                font-size: 25px
+    .blocks-text 
+        margin-left: 22px
+        color: #ffffff
+        font-size: 20px
+        line-height: 25px
+        text-align: left
+        @media(max-width: 800px)
+            font-size: 14px
+            margin-left: 10px
+.services 
+    min-height: 800px
+    padding: 100px 0
+    .tabs 
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: 50px
+        .tabs-item 
+            width: 50%
+            height: 35px
+            padding: 10px 25px 
+            margin-top: 20px
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1)
+            border-radius: 5px
+            background-color: #ffffff
+            overflow: hidden
+            cursor: pointer
+            @media(max-width: 800px)
+                width: 80%
+            .tabs-head 
+                @include flex-between
+                padding:  10px 0
+                .tabs-wrap 
+                    display: flex
+                    i 
+                        color: #061e37
+                        font-size: 25px
+                        font-style: normal
+                        letter-spacing: normal
+                        line-height: 25px
+                    .tabs-title 
+                        margin-left: 30px
+                        color: #061e37
+                        font-weight: 700
+                        text-align: center
+                .tabs-down > i 
+                    color: #061e37
+                    font-size: 20px
+                    font-style: normal
+                    letter-spacing: normal
+                    line-height: 25px
+            .tabs-content 
+                @include flex-around-center
+                .tabs-img-statistic 
+                    background: url(../tabs_img/statistic.jpg ) $center-cover
+                    width: 40%
+                    height: 155px
+                .tabs-img-inbox 
+                    background: url(../tabs_img/inbox.png) $center-cover
+                    width:  40%
+                    height: 155px
+                .tabs-img-team 
+                    background: url(../tabs_img/team.png) $center-cover
+                    width: 40%
+                    height: 155px
+                .tabs-img-setting 
+                    background: url(../tabs_img/setting.png) $center-cover
+                    width: 40%
+                    height: 155px
+                .tabs-img-feed 
+                    background: url(../tabs_img/feed.jpg) $center-cover
+                    width: 40%
+                    height: 155px
+                .tabs-text   
+                    color: #061e37
+                    font-weight: 500
+                    line-height: 25px
+                    text-align: left
+                    width: 60%
+                    min-height: 140px
+                    margin-left: 25px
+        .tabs-item-active 
+            transition: all 0.5s linear
+            height: 20vh
+            cursor: default
+.comment 
+    min-height: 500px
+    background: url(../image/bg/BG.png) $center-cover
+    .container-comment 
+        padding: 80px
+        @media(max-width 1200px)
+            padding: 30px
+        @media(max-width: 600px)
+            flex-direction: column
+        @include flex-around-center
+        .comment-title 
+            margin-top: 50px
+            color: #ffffff
+            font-size: 45px
+            text-align: left
+            @media(max-width:1200px)
+                font-size: 30px
+        .comment-descr 
+            margin-top: 20px
+            color: #ffffff
+            line-height: 25px
+        .comment-btn 
+            width: 150px
+            height: 55px
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15)
+            border-radius: 5px
+            background-color: #061e37
+            color: white
+            margin-top: 80px
+            margin-right: 30px
+            border: none
+            &:hover
+                background: #ffffff
+                color: #061e37
+                font-weight: 600
+        .item-wrapper
+            display: flex
+            flex-direction: column
+            .comment-item
+                @include flex-around-center
+                @media(max-width: 600px)
+                    flex-direction: column
+                .comment-content
+                    margin-bottom: 20px 
+                    width: 80%
+                    min-height: 160px
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+                    border-radius: 5px
+                    background-color: #ffffff
+                    .comment-name 
+                        margin:30px 0 0 30px
+                        color: #061e37
+                        font-size: 18px
+                        font-weight: 700
+                        line-height: 25px
+                        text-align: left
+                    .comment-text 
+                        padding: 10px 60px 30px 30px
+                        color: #78909c
+                        font-style: italic
+                        line-height: 25px
+                        text-align: left
+                .comment-icon 
+                    margin: 50px
+                    height: 70px
+                    width: 70px
+                    border-radius: 100%
+                    @media(max-width:1200px)
+                        margin: 20px
+            #m 
+                background: url(../icons/comments/m.jpg) $center-cover
+            #w 
+                background: url(../icons/comments/w.jpg) $center-cover
+.team 
+    padding: 100px 0px 90px
+    background-color: #fcfcfc
+    @media(max-width: 800px)
+        padding: 30px 
+    .ourteam-text 
+        color: #b0bec5
+        letter-spacing: normal
+        line-height: 25px
+        text-align: center
+    .team-content 
+        margin-top: 98px
+        @media(max-width: 800px)
+            margin-top: 30px
+        .carousel 
+            background-color: #ffffff
+            position: relative
+            width: 50%
+            margin: 0 auto
+            .carousel-image
+                height: 160px
+                width: 160px
+                margin: 0 auto 60px auto
+                border-radius: 100%
+                @media(max-width: 800px)
+                    margin: 0 auto 20px auto
+                @media(max-width: 500px)
+                    width: 100px
+                    height: 100px
+            .carousel-name 
+                color: #061e37
+                font-size: 18px
+                font-weight: 700
+                text-align: center
+            .carousel-text 
+                margin-top: 20px
+                color: #90a4ae
+                letter-spacing: normal
+                line-height: 25px
+                text-align: center
+            .carousel-links 
+                margin-top: 30px
+                display: flex
+                justify-content: center
+                a > i
+                    margin: 0 15px
+                    color: #90a4ae
+                    font-size: 20px
+.arrow 
+    position: absolute
+    top: 20%
+    i 
+        color: #061e37
+        font-size: 60px
+.prev-arrow 
+    left: -5%
+.next-arrow
+    right: -5%
+.contact 
+    margin: 0 auto 120px
+    min-height: 660px
+    background-color: #fafafa
+    @include flex-column-center
+    .contact-descr 
+        padding-top: 30px
+        width: 555px
+        height: 39px
+        color: #061e37
+        line-height: 25px
+        text-align: center
+    .inputs 
+        max-width: 90%
+        margin: 100px auto 0
+        @include flex-center
+        .form-wrap
+            input 
+                margin: 10px auto
+                width: 40%
+                height: 50px
+                border-radius: 5px
+                border: 1px solid #061e37
+                color: #061e37
+                font-weight: 600
+                padding: 0 20px
+                text-align: left
+        textarea 
+            margin: 20px auto
+            width: 90%
+            height: 150px
+            color: #061e37
+            border-radius: 5px
+            border: 1px solid #061e37
+            font-size: 14px
+            font-weight: 500
+            padding: 20px
+            resize: none
+        .contact-btns 
+            width: 90%
+            @include flex-between-center
+            label
+                display: flex
+                align-items: center
+                color: #061e37
+                font-weight: 500
+            .form-checkbox 
+                margin: 0 10px 0 20px
+                width: 20px
+                height: 20px
+                border-radius: 5px
+                border: 3px solid #061e37 
+            .form-btn 
+                width: 130px
+                height: 50px
+                box-shadow:  0 5px 10px rgba(0, 0, 0, 0.15)
+                border-radius: 5px
+                background-color: #1de9b6
+                border: none
+                color: #ffffff
+                font-size: 16px
+                font-weight: 500
+                line-height: 30px
+                text-transform: uppercase
+                transition: all 0.3s ease
+                &:hover 
+                    background-color: #13b990
+.footer 
+    padding: 80px 0
+    background-color: #061e37
+    @media(max-width: 800px)
+        padding: 40px 0
+    .footer-wrap
+        min-height: 100px
+        @include flex-between
+        .footer-first 
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            .logo-wrap 
+                display: flex
+                align-items: center
+                .logo-img 
+                    margin-right: 10px
+                .logo-text 
+                    margin-left: 10px
+                    color: #ffffff
+                    font-family: "Raleway "
+                    font-size: 15px
+                    font-style: normal
+                    line-height: 15px
+                    text-transform: uppercase
+                span 
+                    font-family: Raleway
+                    font-weight: 700
+                    font-style: normal
+                    letter-spacing: normal
+                line-height: normal
+            .footer-submenu 
+                display: flex
+                align-items: center
+                @media(max-width: 800px)
+                    flex-direction: column
+                    align-items: start
+                a 
+                    color: white
+                    opacity: 0.5
+                    @media(max-width: 800px)
+                        margin-bottom: 10px
+                div 
+                    width: 6px
+                    height: 6px
+                    border-radius: 100%
+                    background-color: white
+                    margin: 0 20px
+                    @media(max-width: 800px)
+                        display: none
+        .footer-second 
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: flex-end
+            .footer-nav 
+                display: flex
+                align-items: center
+                .nav-list 
+                    list-style: none
+                    margin: 0
+                    padding: 0
+                    display: flex
+                    @media(max-width: 800px)
+                        flex-direction: column
+                    .nav-item 
+                        margin: 5px 25px
+                        opacity: 0.6
+                        transition: opasity 0.5s ease
+                        &:hover 
+                            opacity: 1
+                        a 
+                            color: #ffffff
+                            font-weight: 600
+            .footer-links 
+                a 
+                    margin: 20px 0 0 20px
+                    i 
+                        opacity: 0.2
+                        color: white
+                        font-size: 20px
+                        @media(max-width: 800px)
+                            margin-top: 20px
+                        &:hover
+                            opacity: 0.8
+                #nav-help
+                    margin-right: 0
+.popup 
+    position: fixed
+    display: none
+    justify-content: center
+    align-items: center
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background-color: rgba(0, 0, 0, 0.6)
+    .popup-wrap 
+        background-color: #fafafa
+        padding: 40px 40px 40px 40px
+        position: relative
+        border-radius: 10px
+        box-shadow: 0 0 10px 0 black
+        .popup-form
+            .popup-title
+                margin: 0 auto 20px
+                font-size: 22px
+                font-weight: 500
+                text-align: center
+            .popup-inputs 
+                .popup-form-wrap
+                    input 
+                        margin: 10px auto
+                        width: 40%
+                        height: 50px
+                        border-radius: 5px
+                        border: 1px solid #061e37
+                        color: #061e37
+                        font-weight: 600
+                        padding: 0 20px
+                        text-align: left
+                textarea 
+                    margin: 20px auto
+                    width: 90%
+                    height: 150px
+                    color: #061e37
+                    border-radius: 5px
+                    border: 1px solid #061e37
+                    font-size: 14px
+                    font-weight: 500
+                    padding: 20px
+                    resize: none
+                .popup-contact-btns 
+                    @include flex-between-center
+                    label
+                        display: flex
+                        align-items: center
+                        color: #061e37
+                        font-weight: 500
+                    .popup-checkbox 
+                        margin: 0 10px 0 20px
+                        width: 20px
+                        height: 20px
+                        border-radius: 5px
+                        border: 3px solid #061e37 
+                    .popup-btn 
+                        width: 130px
+                        height: 50px
+                        box-shadow:  0 5px 10px rgba(0, 0, 0, 0.15)
+                        border-radius: 5px
+                        background-color: #1de9b6
+                        border: none
+                        color: #ffffff
+                        font-size: 16px
+                        font-weight: 500
+                        line-height: 30px
+                        text-transform: uppercase
+                        transition: all 0.3s ease
+                        &:hover 
+                            background-color: #13b990
+        i 
+            position: absolute
+            top: 10px 
+            right: 15px
+            font-size: 30px
+            color: rgb(141, 141, 141)
+            cursor: pointer
+            transition: all 0.1s linear
+            &:hover 
+                color: rgb(223, 0, 0)
+                transform: scale(0.9, 0.9)
+.popup-active 
+    display: flex
